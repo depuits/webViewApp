@@ -1,22 +1,20 @@
 {
-  "name": "electron-quick-start",
+  "name": "webviewapp",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Simple application which embeds a website",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build_win": "electron-packager . webViewApp --platform=win32 --arch=x86_64"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/depuits/webViewApp",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^15.0.0"
+    "electron": "^15.0.0",
+    "electron-packager": "^15.4.0"
   }
 }

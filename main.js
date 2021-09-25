@@ -1,19 +1,19 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
 function createWindow () {
+
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
+    width: +app.commandLine.getSwitchValue('width') || 800,
+    height: +app.commandLine.getSwitchValue('height') || 600,
   })
 
+  var url = app.commandLine.getSwitchValue('url') || 'https://duckduckgo.com'
+  mainWindow.loadURL(url);
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  //mainWindow.loadFile('index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
