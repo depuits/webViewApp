@@ -1,6 +1,6 @@
 # webViewApp
 
-TODO list options and config
+No longer in development. Consider using https://github.com/nativefier/nativefier
 
 ## To Use
 
